@@ -10,6 +10,12 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "mykey.pub"
 }
 
+variable "ACCESS_KEY" {
+}
+
+variable "SECRET_KEY" {
+}
+
 variable "AMIS" {
   type = map(string)
   default = {
