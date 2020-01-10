@@ -3,7 +3,7 @@ variable "AWS_REGION" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "demo"
+  default = "mykey"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
