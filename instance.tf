@@ -10,5 +10,9 @@ resource "aws_instance" "example" {
 
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
+
+  tags = {
+      Project = "DEMO_Ene20"
+  }
 }
 
