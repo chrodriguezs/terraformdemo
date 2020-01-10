@@ -15,25 +15,5 @@ resource "aws_instance" "example" {
       Name = "WebServer"
       Project = "DEMO_Ene20"
   }
-
-  connection {
-    type = "ssh"
-    user = "ubuntu"
-    host = self.public_ip
-    password = var.PATH_TO_PRIVATE_KEY
-  }
-  
-  provisioner "file" {
-    source      = "lap.sh"
-    destination = "/tmp/lap.sh"
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "chmod +x /tmp/lap.sh",
-      "/tmp/lap.sh",
-    ]
-  }
-
 }
 
