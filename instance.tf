@@ -15,5 +15,10 @@ resource "aws_instance" "example" {
       Name = "WebServer"
       Project = "DEMO_Ene20"
   }
+
+  output "webserver_public_ip" {
+      value = aws_instance.server.public_ip
+  }
+
 }
 
