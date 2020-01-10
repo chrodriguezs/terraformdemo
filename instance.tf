@@ -20,6 +20,7 @@ resource "aws_instance" "example" {
     type = "ssh"
     user = "ubuntu"
     host = self.public_ip
+    password = var.PATH_TO_PRIVATE_KEY
   }
   
   provisioner "file" {
