@@ -16,7 +16,13 @@ resource "aws_instance" "example" {
       Project = "DEMO_Ene20"
   }
 
-    provisioner "file" {
+  connection {
+    type = "ssh"
+    user = "ubuntu"
+    host = self.public_ip
+  }
+  
+  provisioner "file" {
     source      = "lap.sh"
     destination = "/tmp/lap.sh"
   }
