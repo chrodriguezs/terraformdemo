@@ -12,7 +12,21 @@ resource "aws_instance" "example" {
   key_name = aws_key_pair.mykeypair.key_name
 
   tags = {
+      Name = "WebServer"
       Project = "DEMO_Ene20"
   }
+
+    provisioner "file" {
+    source      = "lap.sh"
+    destination = "/tmp/lap.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/lap.sh",
+      "/tmp/lap.sh",
+    ]
+  }
+
 }
 
