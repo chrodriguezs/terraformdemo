@@ -88,12 +88,12 @@ resource "aws_subnet" "main-private-3" {
 #    cidr_block = "0.0.0.0/0"
 #    gateway_id = aws_internet_gateway.main-gw.id
 #  }
-
-  tags = {
-    Name = "main-public-1",
-    Project = "DEMO_Ene20"
-  }
-}
+#
+#  tags = {
+#    Name = "main-public-1",
+#    Project = "DEMO_Ene20"
+#  }
+#}
 
 # route associations public
 resource "aws_route_table_association" "main-public-1-a" {
