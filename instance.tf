@@ -33,7 +33,7 @@ resource "aws_instance" "example" {
     inline = [
       "ls /tmp/",
       "chmod +x /tmp/lap.sh",
-      "/tmp/lap.sh"
+      "bash -s /tmp/lap.sh"
     ]
   }
 

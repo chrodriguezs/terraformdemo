@@ -1,7 +1,7 @@
 #!/bin/sh
 # Update packages
 echo -e "\n Updating System.."
-sudo apt-get update
+echo $(sudo apt-get update)
 ## Install AMP
 echo -e "\n Installing Apache2"
 sudo apt-get install -y apache2
@@ -12,7 +12,7 @@ sudo apt-get install -y apache2 php php-gd php-bcmath php-intl php-openssl php-m
 ## TWEAKS and Settings
 # Permissions
 echo -e "\n Permissions for /var/www"
-sudo chown -R www-data:www-data "/var/www" 
+sudo chown -R www-data:www-data "/var/www"
 echo -e "$Green \n Permissions have been set"
 # Enabling Mod Rewrite, required for WordPress permalinks and .htaccess files
 echo -e "\n Enabling Modules"
