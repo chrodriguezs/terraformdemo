@@ -10,17 +10,10 @@ resource "aws_security_group" "allow-ssh" {
   }
 
   ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
     from_port       = 22
     to_port         = 22
     protocol        = "tcp"
-    cidr_blocks = [join("", [var.JENKINS_IP, "/0"])]
+    cidr_blocks = [join("", [var.JENKINS_IP, "/32"])]
   }
 
   ingress {
@@ -50,7 +43,7 @@ resource "aws_security_group" "allow-mariadb" {
     from_port       = 3306
     to_port         = 3306
     protocol        = "tcp"
-    cidr_blocks = [join("", [var.JENKINS_IP, "/0"])]
+    cidr_blocks = [join("", [var.JENKINS_IP, "/32"])]
   }
   egress {
     from_port   = 0
