@@ -31,8 +31,9 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [
+      "ls /tmp/",
       "chmod +x /tmp/lap.sh",
-      "./tmp/lap.sh"
+      "/tmp/lap.sh"
     ]
   }
 
