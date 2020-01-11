@@ -39,7 +39,7 @@ resource "aws_db_instance" "mariadb" {
 }
 
 output "mariadb_endpoint" {
-    value = aws_db_instance.mariadb.enpoint
+    value = aws_db_instance.mariadb.endpoint
 }
 
 output "mariadb_port" {
