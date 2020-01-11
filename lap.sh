@@ -1,6 +1,7 @@
 #!/bin/sh
 echo "Updating Libraries"
 sudo apt-get update
+sleep 10
 echo "Installing Apache"
 sudo apt-get install -y apache2 apache2-bin apache2-utils
 echo "Installing PHP & Complements"
