@@ -21,7 +21,7 @@ resource "aws_instance" "example" {
     host = self.public_ip
     user = var.IaaC_Username
     password = var.IaaC_Passphrase
-    private_key = var.IaaC_PrivateKey
+    private_key = file(var.IaaC_PrivateKey)
   }
   
   provisioner "file" {
