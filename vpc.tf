@@ -98,16 +98,16 @@ resource "aws_subnet" "main-private-3" {
 # route associations public
 resource "aws_route_table_association" "main-public-1-a" {
   subnet_id      = aws_subnet.main-public-1.id
-  route_table_id = aws_route_table.main-public.id
+  route_table_id = "rtb-01eda176b76e1d011"
 }
 
 resource "aws_route_table_association" "main-public-2-a" {
   subnet_id      = aws_subnet.main-public-2.id
-  route_table_id = aws_route_table.main-public.id
+  route_table_id = "rtb-01eda176b76e1d011"
 }
 
 resource "aws_route_table_association" "main-public-3-a" {
   subnet_id      = aws_subnet.main-public-3.id
-  route_table_id = aws_route_table.main-public.id
+  route_table_id = "rtb-01eda176b76e1d011"
 }
 
