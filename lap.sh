@@ -18,5 +18,3 @@ sudo service apache2 restart
 
 # Enabling Apache
 sudo systemctl enable apache2.service
-
-~.
