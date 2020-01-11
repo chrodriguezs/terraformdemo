@@ -18,10 +18,6 @@ Yellow='\033[0;33m'       # Yellow
 Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
-# Update packages and Upgrade system
-echo -e "$Cyan \n Updating System.. $Color_Off"
-sudo apt-get update -y && sudo apt-get upgrade -y
-
 ## Install AMP
 echo -e "$Cyan \n Installing Apache2 $Color_Off"
 sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert -y
