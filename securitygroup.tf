@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow-ssh" {
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = "vpc-043574869874c08de"
   name        = "allow-ssh"
   description = "security group that allows ssh and all egress traffic"
   egress {
@@ -30,7 +30,7 @@ resource "aws_security_group" "allow-ssh" {
 }
 
 resource "aws_security_group" "allow-mariadb" {
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = "vpc-043574869874c08de"
   name        = "allow-mariadb"
   description = "allow-mariadb"
   ingress {
