@@ -43,5 +43,5 @@ output "mariadb_endpoint" {
 }
 
 output "mariadb_port" {
-    value = aws_db_instance.mariadb.public_ip
+    value = aws_db_instance.mariadb.port
 }
