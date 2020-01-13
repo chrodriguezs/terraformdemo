@@ -10,4 +10,3 @@ echo "Enable rewrite & Restart and Enable Apache Service"
 sudo a2enmod rewrite
 sudo service apache2 restart
 sudo systemctl enable apache2.service
-echo "fin"
