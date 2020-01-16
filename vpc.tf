@@ -110,4 +110,3 @@ resource "aws_route_table_association" "main-public-3-a" {
   subnet_id      = aws_subnet.main-public-3.id
   route_table_id = "rtb-01eda176b76e1d011"
 }
-
